@@ -30,9 +30,21 @@ export default class App extends BaseController {
 					"name": "Pampered Chef",
 					"logo_url": "./src/pampered_chef_logo.png",
 					"shop_url": "https://pamperedchef.eu/MartinaHoelzlwimmer"
+				},
+			],
+			"socialmedia": [
+				{
+					"name": "Instagram",
+					"logo_url": "./src/instagram_logo_primary.svg",
+					"socialmedia_url": "https://www.instagram.com/martina_hoelzlwimmer/"
+				},
+				{
+					"name": "Facebook",
+					"logo_url": "./src/facebook_logo_primary.png",
+					"socialmedia_url": "https://www.facebook.com/ina.holzlwimmer"
 				}
 			]
 		});
-		this.getView().setModel(oShopModel, "onlineshops");
+		this.getView().setModel(oShopModel, "martina");
 	}
 }

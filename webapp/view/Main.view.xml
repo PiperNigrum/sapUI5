@@ -9,7 +9,7 @@
     <ObjectPageLayout id="ObjectPageLayout"
                       showTitleInHeaderContent="true"
                       showEditHeaderButton="true"
-                      headerContentPinned="true"
+                      headerContentPinned="false"
                       upperCaseAnchorBar="false">
 
         <headerTitle>
@@ -32,14 +32,14 @@
                 <snappedContent>
                     <m:Text text="Recognized Manager"/>
                 </snappedContent>
-                <snappedTitleOnMobile>
+                <!-- <snappedTitleOnMobile>
                     <m:Title text="Recognized Manager"/>
-                </snappedTitleOnMobile>
+                </snappedTitleOnMobile> -->
 
-                        <actions>
-            <m:Button text="WhatsApp" press=".onWhatsAppPress" type="Emphasized"/>
-            <m:Button icon="sap-icon://share-2" press=".onSharePress"/>
-        </actions>
+                <actions>
+                    <m:Button text="WhatsApp" press=".onWhatsAppPress" type="Emphasized"/>
+                    <m:Button icon="sap-icon://share-2" press=".onSharePress"/>
+                </actions>
 
             </ObjectPageDynamicHeaderTitle>
         </headerTitle>
@@ -50,14 +50,16 @@
                           src="https://lh4.googleusercontent.com/p/AF1QipPW_FGrdvt_ampZB016nut8uZZXsluV5EaETl4A=w243-h444-n-k-no-nu"
                           displaySize="L"/>
                 <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
-                    <m:Link href="tel:+491709038616" text="+49 170 9038 616"/>
-                    <m:Link href="mailto:martina.hoelzlwimmer@gmx.de" text="martina.hoelzlwimmer@gmx.de"/>
-                </layout:VerticalLayout>
-                <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
                     <m:Label text="Willkommen!"/>
 					<m:Label text="Schön dich auf meiner Seite zu haben."/>
 					<m:Label text="Viel Spaß beim Stöbern"/>
                 </layout:VerticalLayout>
+
+                <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+                    <m:Link href="tel:+491709038616" text="+49 170 9038 616"/>
+                    <m:Link href="mailto:martina.hoelzlwimmer@gmx.de" text="martina.hoelzlwimmer@gmx.de"/>
+                </layout:VerticalLayout>
+
                 <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
                     <m:Label text="Martinstraße 3B"/>
                     <m:Label text="84571 Reischach"/>
@@ -75,33 +77,60 @@
                 </subSections>
             </ObjectPageSection>
 
-            <ObjectPageSection titleUppercase="false" id="onlineshops" title="Meine Online-Shops">
+            <ObjectPageSection titleUppercase="false" id="socialMedia" title="Social Media">
                 <subSections>
-                    <ObjectPageSubSection id="onlineshopsSection" title="Online-Shops">
-                        <m:Table id="onlineshopsTable"
-                                 items="{ path:'onlineshops>/onlineshops', sorter: { path: 'name' }}">
+                    <ObjectPageSubSection id="socialMediaSection" title="Social Media">
+                        <m:Table id="socialmediaTable"
+                                 items="{ path:'martina>/socialmedia', sorter: { path: 'name' }}">
                             <m:columns>
                                 <m:Column width="5rem">
                                     <m:Text text=""/>
                                 </m:Column>
-                                <m:Column width="10rem">
-                                    <m:Text text="Shop"/>
-                                </m:Column>
                                 <m:Column width="">
-                                    <m:Text text="Link"/>
+                                    <m:Text text="Plattform"/>
                                 </m:Column>
                             </m:columns>
                             <m:items>
                                 <m:ColumnListItem>
                                     <m:cells>
-                                        <m:Avatar src="{onlineshops>logo_url}"
+                                        <m:Avatar src="{martina>logo_url}"
                                                   displaySize="S"
                                                   class="sapUiTinyMarginEnd"
                                                   backgroundColor="Transparent"/>
-                                        <m:ObjectIdentifier title="{onlineshops>name}"/>
-                                        <m:Link icon="sap-icon://retail-store"
-                                                href="{onlineshops>shop_url}"
-                                                text="{onlineshops>name}-Shop"
+                                    
+                                        <m:Link href="{martina>socialmedia_url}"
+                                                text="{martina>name}"
+                                                target="_blank"/>
+                                    </m:cells>
+                                </m:ColumnListItem>
+                            </m:items>
+                        </m:Table>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+
+            <ObjectPageSection titleUppercase="false" id="onlineshops" title="Online-Shops">
+                <subSections>
+                    <ObjectPageSubSection id="onlineshopsSection" title="Online-Shops">
+                        <m:Table id="onlineshopsTable"
+                                 items="{ path:'martina>/onlineshops', sorter: { path: 'name' }}">
+                            <m:columns>
+                                <m:Column width="5rem">
+                                    <m:Text text=""/>
+                                </m:Column>
+                                <m:Column width="">
+                                    <m:Text text="Shop"/>
+                                </m:Column>
+                            </m:columns>
+                            <m:items>
+                                <m:ColumnListItem>
+                                    <m:cells>
+                                        <m:Avatar src="{martina>logo_url}"
+                                                  displaySize="S"
+                                                  class="sapUiTinyMarginEnd"
+                                                  backgroundColor="Transparent"/>
+                                        <m:Link href="{martina>shop_url}"
+                                                text="{martina>name}"
                                                 target="_blank"/>
                                     </m:cells>
                                 </m:ColumnListItem>
