@@ -27,13 +27,13 @@
                     </m:FlexBox>
                 </snappedHeading>
                 <expandedContent>
-                    <m:Text text="Recognized Manager"/>
+                    <m:Text text="Recognized Manager &amp; Selbstständige Vertriebspartnerin"/>
                 </expandedContent>
                 <snappedContent>
-                    <m:Text text="Recognized Manager"/>
+                    <m:Text text="Recognized Manager &amp; Selbstständige Vertriebspartnerin"/>
                 </snappedContent>
                 <!-- <snappedTitleOnMobile>
-                    <m:Title text="Recognized Manager"/>
+                    <m:Title text="Recognized Manager & Selbstständige Vertriebspartnerin"/>
                 </snappedTitleOnMobile> -->
 
                 <actions>
