@@ -1,0 +1,161 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+          xmlns:layout="sap.ui.layout"
+          xmlns="sap.uxap"
+          xmlns:m="sap.m"
+          xmlns:core="sap.ui.core"
+          controllerName="com.kh.martina.controller.Main"
+          height="100%">
+
+    <ObjectPageLayout id="ObjectPageLayout"
+                      showTitleInHeaderContent="true"
+                      showEditHeaderButton="true"
+                      headerContentPinned="true"
+                      upperCaseAnchorBar="false">
+
+        <headerTitle>
+            <ObjectPageDynamicHeaderTitle>
+                <expandedHeading>
+                    <m:HBox>
+                        <m:Title text="Martina Hölzlwimmer" wrapping="true"/>
+                    </m:HBox>
+                </expandedHeading>
+                <snappedHeading>
+                    <m:FlexBox fitContainer="true" alignItems="Center">
+                        <m:Avatar src="https://lh4.googleusercontent.com/p/AF1QipPW_FGrdvt_ampZB016nut8uZZXsluV5EaETl4A=w243-h444-n-k-no-nu"
+                                  class="sapUiTinyMarginEnd"/>
+                        <m:Title text="Martina Hölzlwimmer" wrapping="true"/>
+                    </m:FlexBox>
+                </snappedHeading>
+                <expandedContent>
+                    <m:Text text="Recognized Manager"/>
+                </expandedContent>
+                <snappedContent>
+                    <m:Text text="Recognized Manager"/>
+                </snappedContent>
+                <snappedTitleOnMobile>
+                    <m:Title text="Recognized Manager"/>
+                </snappedTitleOnMobile>
+
+                        <actions>
+            <m:Button text="WhatsApp" press=".onWhatsAppPress" type="Emphasized"/>
+            <m:Button icon="sap-icon://share-2" press=".onSharePress"/>
+        </actions>
+
+            </ObjectPageDynamicHeaderTitle>
+        </headerTitle>
+
+        <headerContent>
+            <m:FlexBox wrap="Wrap">
+                <m:Avatar class="sapUiSmallMarginEnd"
+                          src="https://lh4.googleusercontent.com/p/AF1QipPW_FGrdvt_ampZB016nut8uZZXsluV5EaETl4A=w243-h444-n-k-no-nu"
+                          displaySize="L"/>
+                <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+                    <m:Link href="tel:+491709038616" text="+49 170 9038 616"/>
+                    <m:Link href="mailto:martina.hoelzlwimmer@gmx.de" text="martina.hoelzlwimmer@gmx.de"/>
+                </layout:VerticalLayout>
+                <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+                    <m:Label text="Willkommen!"/>
+					<m:Label text="Schön dich auf meiner Seite zu haben."/>
+					<m:Label text="Viel Spaß beim Stöbern"/>
+                </layout:VerticalLayout>
+                <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+                    <m:Label text="Martinstraße 3B"/>
+                    <m:Label text="84571 Reischach"/>
+                    <m:Label text="Deutschland"/>
+                </layout:VerticalLayout>
+            </m:FlexBox>
+        </headerContent>
+
+        <sections>
+            <ObjectPageSection titleUppercase="false" id="aboutMe" title="Über mich">
+                <subSections>
+                    <ObjectPageSubSection id="aboutMeSection" title="Über mich">
+                        <m:ExpandableText text="Ich bin Martina Hölzlwimmer, 44 Jahre jung und komme aus Reischach."/>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+
+            <ObjectPageSection titleUppercase="false" id="onlineshops" title="Meine Online-Shops">
+                <subSections>
+                    <ObjectPageSubSection id="onlineshopsSection" title="Online-Shops">
+                        <m:Table id="onlineshopsTable"
+                                 items="{ path:'onlineshops>/onlineshops', sorter: { path: 'name' }}">
+                            <m:columns>
+                                <m:Column width="5rem">
+                                    <m:Text text=""/>
+                                </m:Column>
+                                <m:Column width="10rem">
+                                    <m:Text text="Shop"/>
+                                </m:Column>
+                                <m:Column width="">
+                                    <m:Text text="Link"/>
+                                </m:Column>
+                            </m:columns>
+                            <m:items>
+                                <m:ColumnListItem>
+                                    <m:cells>
+                                        <m:Avatar src="{onlineshops>logo_url}"
+                                                  displaySize="S"
+                                                  class="sapUiTinyMarginEnd"
+                                                  backgroundColor="Transparent"/>
+                                        <m:ObjectIdentifier title="{onlineshops>name}"/>
+                                        <m:Link icon="sap-icon://retail-store"
+                                                href="{onlineshops>shop_url}"
+                                                text="{onlineshops>name}-Shop"
+                                                target="_blank"/>
+                                    </m:cells>
+                                </m:ColumnListItem>
+                            </m:items>
+                        </m:Table>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+
+            <ObjectPageSection titleUppercase="false" id="impressum" title="Impressum">
+                <subSections>
+                    <ObjectPageSubSection id="impressumSection">
+                        <layout:VerticalLayout class="sapUiContentPadding" width="100%">
+                            <layout:content>
+                                <core:HTML content='&lt;h4 id=&quot;m46&quot;&gt;Diensteanbieter&lt;/h4&gt;
+&lt;p&gt;Martina Hölzlwimmer&lt;/p&gt;
+&lt;p&gt;Martinstraße 3B&lt;/p&gt;
+&lt;p&gt;84571 Reischach&lt;/p&gt;
+&lt;p&gt;Germany&lt;/p&gt;
+
+&lt;h4 id=&quot;m56&quot;&gt;Kontaktmöglichkeiten&lt;/h4&gt;&lt;p&gt;E-Mail-Adresse: &lt;a href=&quot;mailto:martina.hoelzlwimmer@gmx.de&quot;&gt;martina.hoelzlwimmer@gmx.de&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;m154&quot;&gt;Journalistisch-redaktionelle Angebote&lt;/h4&gt;&lt;p&gt;Inhaltlich verantwortlich: Martina Hölzlwimmer (Adresse wie oben)&lt;/p&gt;
+
+&lt;h4 id=&quot;m3589&quot;&gt;Audiovisuelle Mediendienste&lt;/h4&gt;&lt;p&gt;Sitzland: Deutschland.&lt;/p&gt;
+&lt;p&gt;Zuständige Regulierungs-, bzw. Aufsichtsbehörde: Bayerische Landeszentrale für neue Medien (BLM), &lt;a href=&quot;https://www.blm.de/&quot; target=&quot;_blank&quot;&gt;https://www.blm.de/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;m58&quot;&gt;Angaben zum Unternehmen&lt;/h4&gt;&lt;p&gt;Umsatzsteuer Identifikationsnummer (USt-ID): 106/229/71106&lt;/p&gt;
+
+&lt;h4 id=&quot;m174&quot;&gt;Streitschlichtung und Verbraucherstreitbeilegung&lt;/h4&gt;&lt;p&gt;Wir sind nicht bereit und nicht verpflichtet an einem Streitbeilegungsverfahren vor einer Verbraucherstreitschlichtungsstelle teilzunehmen.&lt;/p&gt;
+
+&lt;h4 id=&quot;m172&quot;&gt;Social Media und andere Onlinepräsenzen&lt;/h4&gt;&lt;p&gt;Dieses Impressum gilt auch für die folgenden Social-Media-Präsenzen und Onlineprofile: &lt;/p&gt;
+&lt;p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://sites.kammerl-hoelzlwimmer.de/martina&quot; target=&quot;_blank&quot;&gt;https://sites.kammerl-hoelzlwimmer.de/martina&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://www.instagram.com/martina_hoelzlwimmer&quot; target=&quot;_blank&quot;&gt;https://www.instagram.com/martina_hoelzlwimmer&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://www.facebook.com/ina.holzlwimmer&quot; target=&quot;_blank&quot;&gt;https://www.facebook.com/ina.holzlwimmer&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;m5234&quot;&gt;Vorbehalt der Nutzung für Text und Data Mining&lt;/h4&gt;&lt;p&gt;Vorbehalt der Nutzung für Text und Data Mining: Der Inhaber dieser Website gestattet die Nutzung oder das Herunterladen von Inhalten dieser Website durch Dritte für die Entwicklung, das Training oder den Betrieb von künstlicher Intelligenz oder anderen maschinellen Lernsystemen (&quot;Text und Data Mining&quot;) ausschließlich mit ausdrücklicher schriftlicher Zustimmung des Inhabers. Ohne eine solche Zustimmung ist es untersagt, die Inhalte für Text und Data Mining zu verwenden. Dies gilt auch, wenn auf der Website keine Meta-Angaben vorhanden sind, die entsprechende Verfahren aussperren, und selbst dann, wenn Bots, die den Zweck haben, die Website zu Zwecken des Text und Data Mining auszulesen, nicht ausgesperrt werden.&lt;/p&gt;
+
+&lt;h4 id=&quot;m65&quot;&gt;Haftungs- und Schutzrechtshinweise&lt;/h4&gt;&lt;p&gt;Haftungsausschluss: Die Inhalte dieses Onlineangebotes wurden sorgfältig und nach unserem aktuellen Kenntnisstand erstellt, dienen jedoch nur der Information und entfalten keine rechtlich bindende Wirkung, sofern es sich nicht um gesetzlich verpflichtende Informationen (z. B. das Impressum, die Datenschutzerklärung, AGB oder verpflichtende Belehrungen von Verbrauchern) handelt. Wir behalten uns vor, die Inhalte vollständig oder teilweise zu ändern oder zu löschen, soweit vertragliche Verpflichtungen unberührt bleiben. Alle Angebote sind freibleibend und unverbindlich.&lt;/p&gt;
+&lt;p&gt;Links auf fremde Webseiten: Die Inhalte fremder Webseiten, auf die wir direkt oder indirekt verweisen, liegen außerhalb unseres Verantwortungsbereiches und wir machen sie uns nicht zu Eigen. Für alle Inhalte und Nachteile, die aus der Nutzung der in den verlinkten Webseiten aufrufbaren Informationen entstehen, übernehmen wir keine Verantwortung.&lt;/p&gt;
+&lt;p&gt;Urheberrechte und Markenrechte: Alle auf dieser Website dargestellten Inhalte, wie Texte, Fotografien, Grafiken, Marken und Warenzeichen sind durch die jeweiligen Schutzrechte (Urheberrechte, Markenrechte) geschützt. Die Verwendung, Vervielfältigung usw. unterliegen unseren Rechten oder den Rechten der jeweiligen Urheber bzw. Rechteinhaber.&lt;/p&gt;
+&lt;p&gt;Hinweise auf Rechtsverstöße: Sollten Sie innerhalb unseres Internetauftritts Rechtsverstöße bemerken, bitten wir Sie uns auf diese hinzuweisen. Wir werden rechtswidrige Inhalte und Links nach Kenntnisnahme unverzüglich entfernen.&lt;/p&gt;'/>
+                            </layout:content>
+                        </layout:VerticalLayout>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+        </sections>
+
+        <footer>
+            <m:OverflowToolbar>
+                <m:ToolbarSpacer/>
+                <m:Button type="Accept" text="Accept"/>
+                <m:Button type="Reject" text="Reject"/>
+            </m:OverflowToolbar>
+        </footer>
+
+    </ObjectPageLayout>
+</mvc:View>
