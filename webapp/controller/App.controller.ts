@@ -14,7 +14,7 @@ export default class App extends BaseController {
 				{
 					"name": "Hyla",
 					"logo_url": "./src/Hyla_Germany_logo.svg",
-					"shop_url": "https://197684.hyla-germany.de/de/about-me"
+					"shop_url": "https://martina-hoelzlwimmer.hyla-germany.de/"
 				},
 				{
 					"name": "Forever",
