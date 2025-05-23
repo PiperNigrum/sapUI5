@@ -21,7 +21,7 @@
                 </expandedHeading>
                 <snappedHeading>
                     <m:FlexBox fitContainer="true" alignItems="Center">
-                        <m:Avatar src="https://lh4.googleusercontent.com/p/AF1QipPW_FGrdvt_ampZB016nut8uZZXsluV5EaETl4A=w243-h444-n-k-no-nu"
+                        <m:Avatar src="https://lh3.googleusercontent.com/p/AF1QipPZC_zCXL-QTENUqN6EcNkjLxqMVlpkDC5QoHIb=w468-h624-k-no?lang=de"
                                   class="sapUiTinyMarginEnd"/>
                         <m:Title text="Martina Hölzlwimmer" wrapping="true"/>
                     </m:FlexBox>
@@ -47,14 +47,14 @@
         <headerContent>
             <m:FlexBox wrap="Wrap">
                 <m:Avatar class="sapUiSmallMarginEnd"
-                          src="https://lh4.googleusercontent.com/p/AF1QipPW_FGrdvt_ampZB016nut8uZZXsluV5EaETl4A=w243-h444-n-k-no-nu"
+                          src="https://lh3.googleusercontent.com/p/AF1QipPZC_zCXL-QTENUqN6EcNkjLxqMVlpkDC5QoHIb=w468-h624-k-no?lang=de"
                           displaySize="L">
                     <m:detailBox>
                         <m:LightBox>
                             <m:LightBoxItem
-                                imageSrc="https://lh4.googleusercontent.com/p/AF1QipPW_FGrdvt_ampZB016nut8uZZXsluV5EaETl4A=w243-h444-n-k-no-nu"
-                                title="Das bin Ich"
-                                subtitle="mit dabei meine Familie"
+                                imageSrc="https://lh3.googleusercontent.com/p/AF1QipPZC_zCXL-QTENUqN6EcNkjLxqMVlpkDC5QoHIb=w468-h624-k-no?lang=de"
+                                title="Martina Hölzlwimmer"
+                                
                                 description="Recognized Manager &amp; Selbstständige Vertriebspartnerin"/>
                         </m:LightBox>
                     </m:detailBox>
@@ -82,7 +82,9 @@
             <ObjectPageSection titleUppercase="false" id="aboutMe" title="Über mich">
                 <subSections>
                     <ObjectPageSubSection id="aboutMeSection" title="Über mich">
-                        <m:ExpandableText text="Ich bin Martina Hölzlwimmer, 44 Jahre jung und komme aus Reischach."/>
+                        <m:ExpandableText text="Ich bin die Martina und komme aus Reischach. 
+                                                Neben meinem vielseitigen Beruf verbringe ich gerne Zeit mit meinen Liebsten
+                                                oder in den Bergen."/>
                     </ObjectPageSubSection>
                 </subSections>
             </ObjectPageSection>

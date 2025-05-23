@@ -55,7 +55,7 @@
 						"en",
 						"de"
 					],
-					"fallbackLocale": "en",
+					"fallbackLocale": "de",
 					"async": true
 				}
 			}
