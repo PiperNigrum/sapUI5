@@ -71,7 +71,6 @@
                 </layout:VerticalLayout>
 
                 <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
-                    <m:Label text="Martinstraße 3B"/>
                     <m:Label text="84571 Reischach"/>
                     <m:Label text="Deutschland"/>
                 </layout:VerticalLayout>
@@ -84,8 +83,7 @@
                     <ObjectPageSubSection id="aboutMeSection" title="Über mich">
                         <m:ExpandableText text="Ich bin die Martina und komme aus Reischach. 
                                                 Neben meinem vielseitigen Beruf verbringe ich gerne Zeit mit meinen Liebsten
-                                                oder in den Bergen. Für das ein oder andere Glas Aperol komme ich gerne bei Dir vorbei
-                                                ☺️"/>
+                                                oder in den Bergen. Wenn du dich für unsere Produkte interessierst, schreib mir gerne eine Nachricht!"/>
                     </ObjectPageSubSection>
                 </subSections>
             </ObjectPageSection>
